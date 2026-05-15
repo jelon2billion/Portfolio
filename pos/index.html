@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Store POS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN SCREEN -->
+<div id="login-screen" class="login">
+  <h2>🔐 Login</h2>
+  <input type="text" id="username" placeholder="Username"><br><br>
+  <input type="password" id="password" placeholder="Password"><br><br>
+  <button onclick="login()">Login</button>
+</div>
+
+<div class="overlay" style="display:none;">
+
+  <header>
+  <h1>🎵 Music Store POS</h1>
+
+  <div class="header-right">
+    <span class="sales-info">
+    Today Sales: ₱<span id="daily-sales">0</span>
+    </span>
+
+    <span id="user-role" class="user-badge"></span>
+
+    <button class="btn secondary" onclick="newTransaction()">New</button>
+    <button class="btn secondary" onclick="goBack()">⬅ Back</button>
+    <button class="btn danger" onclick="logout()">Logout</button>
+  </div>
+</header>
+
+  <div class="main">
+
+    <!-- PRODUCTS -->
+    <div class="products">
+      <h2>Instruments</h2>
+      <div id="product-list" class="product-grid"></div>
+    </div>
+
+    <!-- POS PANEL -->
+    <div class="pos">
+      <h2>🛒 Cart</h2>
+      <ul id="cart-list"></ul>
+
+      <h3>Total: ₱<span id="total">0</span></h3>
+
+      <input type="number" id="cash" placeholder="Enter Cash">
+      <button class="checkout-btn" onclick="checkout()">Checkout</button>
+
+
+      <p id="change"></p>
+    </div>
+
+  </div>
+
+  <!-- RECEIPT -->
+  <div id="receipt" class="receipt hidden">
+    <h2>🧾 Receipt</h2>
+    <div id="receipt-content"></div>
+    <button onclick="printReceipt()">Print</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

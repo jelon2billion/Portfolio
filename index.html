@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <div id="particles-js" class="fixed inset-0 z-0"></div>
+    <nav class="fixed top-0 w-full bg-gray-800 bg-opacity-90 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Portfolio</h1>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
+                <li><a href="profile.html" class="hover:text-blue-400 transition">Profile</a></li>
+                <li><a href="projects.html" class="hover:text-blue-400 transition">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center relative">
+        <div class="text-center animate-fade-in">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Welcome to My Portfolio</h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto">Discover my journey, skills, and projects crafted with passion and innovation.</p>
+            <a href="projects.html" class="mt-6 inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full transition">View Projects</a>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

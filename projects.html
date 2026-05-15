@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <div id="particles-js" class="fixed inset-0 z-0"></div>
+    <nav class="fixed top-0 w-full bg-gray-800 bg-opacity-90 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Portfolio</h1>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
+                <li><a href="profile.html" class="hover:text-blue-400 transition">Profile</a></li>
+                <li><a href="projects.html" class="hover:text-blue-400 transition">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center relative py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-10 animate-slide-up">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <h3 class="text-xl font-semibold mb-2">Attendance System</h3>
+                    <p class="mb-4">Attendance with real-time security.</p>
+                    <button class="view-details px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-full" data-details="Details: Uses PHP, Javascript and CSS featuring real-time attendance updates.">View Details</button>
+                    <a href="https://youtu.be/PRXouz0aa7g" target="_blank" class="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-full transition">Visit Project</a>
+                </div>
+                <div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <h3 class="text-xl font-semibold mb-2">Face Detection System</h3>
+                    <p class="mb-4">Detects faces and captures snapshots automatically.</p>
+                    <div class="flex space-x-4">
+                        <button class="view-details px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-full" data-details="Details: Uses Python and machine learning for automation.">View Details</button>
+                        <a href="https://www.youtube.com/watch?v=MjUkt3XyiQQ&list=PLLbl5ySIEetQO29R89sbxF4iPOs4ybZtU" target="_blank" class="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-full transition">Visit Project</a>
+                    </div>
+                </div>
+                <div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <h3 class="text-xl font-semibold mb-2">Image Editor</h3>
+                    <p class="mb-4">Creative editing with custom, real-time filters.</p>
+                    <button class="view-details px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-full" data-details="Details: Uses C# Programming Language and a simple UI.">View Details</button>
+                    <a href="https://youtu.be/JzIyEzZsXNM" target="_blank" class="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-full transition">Visit Project</a>
+                </div>
+                <div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <h3 class="text-xl font-semibold mb-2">POS System (Music Store)</h3>
+                    <p class="mb-4">A smart POS system with inventory, receipt printing, and sales tracking.</p>
+
+                          <div class="flex space-x-4">
+                                <button class="view-details px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-full"
+                                        data-details="Details: Built using HTML, CSS, and JavaScript. Features include cart system, stock alerts, receipt generation, daily sales tracking, and inventory management.">
+                                        View Details
+                                </button>
+
+                                       <!-- CHANGE THIS LINK -->
+                                       <a href="pos/index.html?from=portfolio" target="_blank" class="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-full transition">Visit Project</a>
+                         </div>
+               </div>
+
+                <div class="project-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+    <h3 class="text-xl font-semibold mb-2">Code Scramble Game</h3>
+
+    <p class="mb-4">
+        A programming word scramble game with leaderboard, timer, hints, and multiple difficulties.
+    </p>
+
+    <div class="flex space-x-4">
+        <button
+            class="view-details px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-full"
+            data-details="Details: Built using HTML, CSS, and JavaScript. Features include difficulty levels, leaderboard system, timer countdown, hints, score tracking, lives system, and animated floating letter background.">
+            View Details
+        </button>
+
+        <!-- CHANGE PATH IF NEEDED -->
+        <a href="Game Project/index.html?from=portfolio" target="_blank" class="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-full transition">Visit Project</a>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-gray-800 p-6 rounded-lg max-w-lg w-full">
+            <h3 class="text-2xl font-bold mb-4">Project Details</h3>
+            <p id="modal-content" class="mb-4"></p>
+            <button id="close-modal" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-full">Close</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

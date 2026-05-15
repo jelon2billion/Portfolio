@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Scramble</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- FLOATING LETTER BACKGROUND -->
+<div id="letter-bg"></div>
+
+<!-- HOME + LEADERBOARD WRAPPER -->
+<div class="screen active">
+
+    <!-- GAME TITLE & PLAY -->
+    <h1 style="margin-bottom:5px;">💻 CODE SCRAMBLE</h1>
+    <p style="margin-top:0;">Unscramble programming words</p>
+    <button onclick="goToName()">PLAY</button>
+
+    <!-- LEADERBOARD SECTION -->
+    <h2 style="margin-top:25px;">🏆 Leaderboard</h2>
+
+    <!-- Difficulty selector for leaderboard -->
+    <select id="leaderboardDifficulty" onchange="changeLeaderboard()">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+
+    <button onclick="resetLeaderboard()">Reset Leaderboard</button>
+
+    <div id="leaderboardDisplay" class="leaderboard-list"></div>
+</div>
+
+<!-- NAME SCREEN -->
+<div id="nameScreen" class="screen">
+    <h2>Enter Your Name</h2>
+    <input type="text" id="playerName" placeholder="Your name">
+    <button onclick="goToDifficulty()">Next</button>
+</div>
+
+<!-- DIFFICULTY SCREEN -->
+<div id="difficultyScreen" class="screen">
+    <h2>Select Difficulty</h2>
+    <select id="difficultySelect">
+        <option value="">-- Choose Difficulty --</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+    <button onclick="startGame()">Start Game</button>
+</div>
+
+<!-- GAME SCREEN -->
+<div id="gameScreen" class="screen">
+    <h2>Scrambled Word</h2>
+    <div id="scrambledWord" class="scramble">----</div>
+
+    <input type="text" id="userInput" placeholder="Your answer">
+
+    <div>
+        <button onclick="checkAnswer()">Submit</button>
+        <button onclick="showHint()">Hint</button>
+    </div>
+
+    <p>⏱ Time: <span id="time">20</span>s</p>
+    <p>⭐ Score: <span id="score">0</span></p>
+    <div id="livesContainer"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
